@@ -1,6 +1,6 @@
 ---
 name: write-commit-messages
-description: Create commit messages that follow the Conventional Commits v1.0.0 specification. Use whenever asked to provide a commit message or to write, standardize, or suggest git commit messages with structured type/scope/breaking-change markers or conventional footers. Use also when the user asks to commit changes but does not provide a commit message.
+description: Create commit messages that follow the Conventional Commits v1.0.0 specification. Use whenever asked to provide a commit message
 ---
 
 # Write Commit Messages
