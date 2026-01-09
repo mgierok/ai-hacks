@@ -6,6 +6,7 @@
 - use `curl` instead of python script to perform simple http requests
 - use `apply_patch` to perform text manipulations (add/remove/edit)
 - use `rm` to remove files
+- use `cat /dev/null > filename` to erase a file
 
 ## Optimized Queries and Tools
 
