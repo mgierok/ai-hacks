@@ -81,12 +81,12 @@ DDD provides the meaning and correctness of the inner layers.
 
 ### Mapping DDD Concepts to Clean Architecture
 
-| Clean Architecture Layer         | DDD Placement                                   |
-|----------------------------------|-------------------------------------------------|
-| Enterprise Business Rules        | Entities, Value Objects, Aggregates, Events     |
-| Application Business Rules       | Application Services, Use Cases, Repositories   |
-| Interface Adapters               | Controllers, Presenters, DTO Mappers, ACL       |
-| Frameworks and Drivers           | Web frameworks, DBs, queues, external SDKs      |
+| Clean Architecture Layer         | DDD Placement                                                 |
+|----------------------------------|---------------------------------------------------------------|
+| Enterprise Business Rules        | Entities, Value Objects, Aggregates, Events, Repositories     |
+| Application Business Rules       | Application Services, Use Cases                               |
+| Interface Adapters               | Controllers, Presenters, DTO Mappers, ACL                     |
+| Frameworks and Drivers           | Web frameworks, DBs, queues, external SDKs                    |
 
 ### Complementary Roles
 
@@ -94,6 +94,7 @@ DDD provides the meaning and correctness of the inner layers.
   of infrastructure and framework choices.
 - **DDD** gives the inner layers meaningful structure and behavior, preventing
   anemic models and service-heavy logic.
+- Repository interfaces belong to the domain; implementations live in infrastructure.
 
 ### Example Interaction Flow
 
@@ -134,6 +135,7 @@ src/
     aggregates/
     events/
     services/
+    repositories/
   application/
     use-cases/
     ports/
@@ -141,7 +143,6 @@ src/
   adapters/
     controllers/
     presenters/
-    repositories/
     mappers/
     acl/
   infrastructure/
