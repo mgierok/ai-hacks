@@ -1,5 +1,5 @@
 ---
-name: generate
+name: generate-image
 description: Nano Banana Pro (nano-banana-pro) image generation skill. Use this skill when the user asks to "generate an image", "generate images", "create an image", "make an image", uses "nano banana", or requests multiple images like "generate 5 images". Generates images using Google's Gemini 2.5 Flash for any purpose - frontend designs, web projects, illustrations, graphics, hero images, icons, backgrounds, or standalone artwork. Invoke this skill for ANY image generation request.
 ---
 
@@ -26,6 +26,7 @@ uv run "${SKILL_DIR}/scripts/image.py" \
 Where `${SKILL_DIR}` is the directory containing this SKILL.md file.
 
 Options:
+
 - `--prompt` (required): Detailed description of the image to generate
 - `--output` (required): Output file path (PNG format)
 - `--aspect` (optional): Aspect ratio - "square", "landscape", "portrait" (default: square)
@@ -49,20 +50,23 @@ The reference image helps Gemini understand the desired style, composition, or v
 After generating images, incorporate them into frontend code:
 
 **HTML/CSS:**
+
 ```html
 <img src="./generated-hero.png" alt="Description" class="hero-image" />
 ```
 
 **React:**
+
 ```jsx
-import heroImage from './assets/generated-hero.png';
-<img src={heroImage} alt="Description" className="hero-image" />
+import heroImage from "./assets/generated-hero.png";
+<img src={heroImage} alt="Description" className="hero-image" />;
 ```
 
 **CSS Background:**
+
 ```css
 .hero-section {
-  background-image: url('./generated-hero.png');
+  background-image: url("./generated-hero.png");
   background-size: cover;
   background-position: center;
 }
@@ -73,9 +77,11 @@ import heroImage from './assets/generated-hero.png';
 Write detailed, specific prompts for best results:
 
 **Good prompt:**
+
 > A minimalist geometric pattern with overlapping translucent circles in coral, teal, and gold on a deep navy background, suitable for a modern fintech landing page hero section
 
 **Avoid vague prompts:**
+
 > A nice background image
 
 ### Prompt Elements to Include
@@ -106,6 +112,7 @@ When used alongside the frontend-design skill:
 ## Output Location
 
 By default, save generated images to the project's assets directory:
+
 - `./assets/` for simple HTML projects
 - `./src/assets/` or `./public/` for React/Vue projects
 - Use descriptive filenames: `hero-abstract-gradient.png`, `icon-user-avatar.png`
