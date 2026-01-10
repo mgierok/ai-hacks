@@ -1,6 +1,10 @@
 # ai-hacks
 A set of helpers, tools and rules for AI Coding Agents
 
+## Skill sources
+- `generate-image` — ported from https://github.com/buildatscale-tv/claude-code-plugins (skill name `generate`).
+- `frontend-design` — sourced from https://github.com/anthropics/skills.
+
 ## System requirements
 To run every command and script referenced in this repo, install the tools below:
 - `git` — version control CLI used by commit and workflow prompts.
